@@ -9,15 +9,21 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="hero">
-        <h1>
-            <a href="/">Tech Blog</a>
-        </h1>
-        <nav>
-            <button class="btn-no-style" id="logout">Logout</button>
-            <a href="/login">MyTechBlog</a>
-        </nav>
-        </header>
+      <header class="hero">
+          <div>
+            <nav class"nav">
+                    <a class="link" href="/">Home</a>
+                    <a class="link" href="/dashboard">Dashboard</a>
+                    {{#if loggedIn}}
+                    <a class="link" href="/" id="logout">Logout</a>
+                    {{else}}
+                    <a class="link" href="/login">Login</a>
+                    {{/if}}
+                </nav>          
+          </div>
+
+          <h1 class="app-title"><i class="fab "></i>The Tech Blog</h1>
+      </header>
 
         <main>
             {{{ body }}}
