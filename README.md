@@ -1,1 +1,1 @@
-# techie_blog
+# tech_blog
