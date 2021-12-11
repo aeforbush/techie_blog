@@ -8,7 +8,7 @@ async function loginFormHandler(event) {
   // conditional to validate all fields have values
   if (password && email) {
     const response = await fetch("/api/users/login", {
-      method: "post",
+      method: "POST",
       body: JSON.stringify({
         email,
         password,

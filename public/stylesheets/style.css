@@ -1,15 +1,22 @@
-
+:root {
+    --primary: #ccdad1;
+    --secondary: #dce9d5;
+    --tertiary: #788585;
+    --light-dark: #a1a0a1;
+    --dark: #201110;
+    --border-radius: .3rem;
+}
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #9cb4b4;
+    background-color: var(--primary);
     margin: 0;
     padding: 0;
     font-family: "IBM Plex Sans", sans-serif;
-    color: white;
+    color: var(--dark);
     line-height: 1.5;
     font-size: 24px;
 }
@@ -21,12 +28,12 @@ h5,
 h6 {
     font-weight: 700;
     margin: 0;
-    color: pink;
+    color: var(--dark);
     line-height: 1.25;
 }
 
 .link-color {
-    color: orangered;
+    color: var(--tertiary);
     padding: 10px;
     margin: 10px
 }
@@ -49,14 +56,14 @@ p {
 }
 
 .btn {
-    font-size: 2rem;
+    font-size: 1.3rem;
     text-decoration: none;
     padding: 6px 5px;
     width: 100%;
     display: block;
     margin: 5px 0;
-    border-radius: 25px;
-    color: red;
+    border-radius: var(--border-radius);
+    color: white;
     border: none;
     outline: none;
     background-color: var(--light-dark);
@@ -64,8 +71,8 @@ p {
 }
 
 .btn:hover {
-    color: purple;
-    background-color: red;
+    color: var(--primary);
+    background-color: var(--tertiary);
     transform: translate(0, 0);
     box-shadow: 2px 2px var(--dark);
 }
@@ -75,12 +82,12 @@ p {
 }
 
 .btn-back {
-    border-radius: 25px;
-    color: yellow;
+    border-radius: var(--border-radius);
+    color: var(--primary);
     border: none;
     outline: none;
-    background-color: black;
-    box-shadow: 3px 3px grey;
+    background-color: var(--light-dark);
+    box-shadow: 3px 3px var(--secondary);
     transform: translate(-1px, -1px);
     display: inline-block;
     width: auto;
@@ -109,8 +116,8 @@ p {
 
 .app-title {
     font-size: 3rem;
-    background-color: darkgrey;
-    color: green;
+    background-color: var(--primary);
+    color: var(--dark);
     padding: 0 10px;
     display: inline-block;
     border-radius: var(--border-radius);
@@ -483,3 +490,4 @@ footer {
         flex: 0 0 100%;
     }
 }
+
