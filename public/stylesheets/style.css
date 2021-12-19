@@ -1,8 +1,8 @@
 :root {
-    --primary: #ccdad1;
+    --primary: #b6cabd;
     --secondary: #dce9d5;
-    --tertiary: #788585;
-    --light-dark: #a1a0a1;
+    --tertiary: #757c7c;
+    --light-dark: #b4b1b4;
     --dark: #201110;
     --border-radius: .3rem;
 }
@@ -15,7 +15,7 @@ body {
     background-color: var(--primary);
     margin: 0;
     padding: 0;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: var(--dark);
     line-height: 1.5;
     font-size: 24px;
@@ -39,7 +39,7 @@ h6 {
 }
 
 main {
-    margin: 20px auto;
+    margin: 40px auto;
     width: 94%;
 }
 
@@ -56,7 +56,7 @@ p {
 }
 
 .btn {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     text-decoration: none;
     padding: 6px 5px;
     width: 100%;
@@ -74,7 +74,7 @@ p {
     color: var(--primary);
     background-color: var(--tertiary);
     transform: translate(0, 0);
-    box-shadow: 2px 2px var(--dark);
+    box-shadow: 4px 4px var(--dark);
 }
 
 .btn-inline {
@@ -118,7 +118,7 @@ p {
     font-size: 3rem;
     background-color: var(--primary);
     color: var(--dark);
-    padding: 0 10px;
+    padding: 10px 10px;
     display: inline-block;
     border-radius: var(--border-radius);
     box-shadow: 6px 5px var(--light-dark);
@@ -156,6 +156,8 @@ p {
 .icon-success {
     color: rgb(29, 153, 255);
 }
+
+
 /* CARDS */
 
 .card {

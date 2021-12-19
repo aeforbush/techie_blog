@@ -50,11 +50,11 @@ router.post("/", (req, res) => {
     .then((dbUserData) => {
       // wrapping variables in a callback to ensure the sess was created
       req.session.save(() => {
-      req.session.user_id = dbUserData.id;
-      req.session.loggedIn = true;
+        req.session.user_id = dbUserData.id;
+        req.session.loggedIn = true;
 
-      res.json(dbUserData);
-    })
+        res.json(dbUserData);
+      });
     })
     .catch((err) => {
       console.log(chalk.blue(err));
@@ -81,7 +81,7 @@ router.post("/login", (req, res) => {
     const validPassword = dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res.status(400).json({ message: 'Incorrect password! '});
+      res.status(400).json({ message: "Incorrect password! " });
       return;
     }
 
@@ -89,20 +89,20 @@ router.post("/login", (req, res) => {
       // declare session varibles
       req.session.user_id = dbUserData.id;
       req.session.loggedIn = true;
-    })
+    });
     res.json({ user: dbUserData, message: "You are logged in!" });
   });
 });
 
-router.post('/logout', (req, res) => {
+router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
-    })
+    });
   } else {
-    res.status(404).end();
+    res.status(404).end(); // if there was no session
   }
-})
+});
 
 // PUT/api/users/1
 router.put("/:id", (req, res) => {
